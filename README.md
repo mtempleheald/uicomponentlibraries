@@ -26,3 +26,20 @@ Specifically, for a customer-facing HTMX application with a .NET8+ backend, wher
 - Shoelace - webcomponent library independent from corporate design, linked to fontawesome
 - Fluent Blazor - Blazor components built on top of FluentUI's webcomponents, using web assembly to perform logic written in C# in the browser
 - ...
+
+# Criteria
+
+- Must align to the vision statement above or have a very good reason not to
+- Must have all key form controls:
+  - Text field + variants, e.g. email, password, text area
+  - Number field
+  - Datepicker
+  - Checkbox/switch
+  - Buttons
+  - Select list/ drop down
+  - Searchable typeahead
+- Must have the option to extend with custom components without awaiting upstream PR approval
+- Must have a consistent look and feel across all components, defined by a theme
+- Must be able to tweak and/or replace the theme, dynamically selecting the correct theme based on brand is a backend concern not for this
+- Must be flexible to override styling on individual components for special cases
+- Must not be horrendous to work with, a learning curve is ok, but jumping through hoops for simple stuff long term is not
