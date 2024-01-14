@@ -1,0 +1,62 @@
+﻿@code {
+    public string SampleText => "Some text";
+}
+
+<!doctype html>
+<html>
+<head>
+    <title>Shoelace components</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@@shoelace-style/shoelace@2.12.0/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@@shoelace-style/shoelace@2.12.0/cdn/shoelace-autoloader.js"></script>
+    <style src="/styles.css"></style>
+</head>
+    <a href="/">Home</a>
+<body>
+    <header>
+        <h1>Shoelace components</h1>
+
+        <a target="_blank" href="https://shoelace.style/">Component Documentation</a>
+    </header>
+
+    <section class="component">
+        <sl-card>
+            <h2>@SampleText</h2>
+            <sl-button id="button" size="medium">Click Me</sl-button>
+        </sl-card>
+    </section>
+
+    <section class="component">
+        <sl-input 
+            class="label-on-left" 
+            size="medium" 
+            type="email"
+            placeholder="user@email.com" 
+            help-text="HELP!"
+        >Email</sl-input>
+    </section>
+
+    <section class="component">
+        <sl-checkbox>Did you check this?</sl-checkbox>
+        <br />
+        <sl-checkbox checked disabled>Is this disabled?</sl-checkbox>
+        <br />
+        <sl-checkbox checked>Checked by default?</sl-checkbox>
+    </section>
+
+    <section class="component">
+        <h3>Select list (does not seem to be a searchahead alternative)</h3>
+        <sl-select title="Select a section">
+            <sl-option value="1">Beginning</sl-option>
+            <sl-option value="2">Middle</sl-option>
+            <sl-option value="3">End</sl-option>
+        </sl-select>
+    </section>
+
+    <section class="component">
+        <sl-switch>
+            Select this?
+        </sl-switch>
+    </section>
+
+</body>
+</html>

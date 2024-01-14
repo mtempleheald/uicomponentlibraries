@@ -1,0 +1,70 @@
+﻿@code {
+    public string SampleText => "Some text";
+}
+
+<!doctype html>
+<html>
+<head>
+    <title>FluentUI components</title>
+    <script type="module" src="https://unpkg.com/@@fluentui/web-components"></script>
+    <style src="/styles.css"></style>
+</head>
+<body>
+    <a href="/">Home</a>
+    <header>
+        <h1>FluentUI components</h1>
+
+        <fluent-anchor target="_blank" appearance="" href="https://learn.microsoft.com/en-us/fluent-ui/web-components/components/anchor?pivots=typescript">Component Documentation</fluent-anchor>
+    </header>
+
+    <section class="component">
+        <fluent-card>
+            <h2>@SampleText</h2>
+            <fluent-button id="button" appearance="accent">Click Me</fluent-button>
+        </fluent-card>
+    </section>
+
+    <section class="component">
+        <fluent-text-field appearance="outline" placeholder="user@email.com">Email</fluent-text-field>
+    </section>
+
+    <section class="component">
+        <fluent-number-field value="0">Number: </fluent-number-field>
+    </section>
+
+    <section class="component">
+        <fluent-checkbox>Did you check this?</fluent-checkbox>
+        <br />
+        <fluent-checkbox checked disabled>Is this disabled?</fluent-checkbox>
+        <br />
+        <fluent-checkbox checked>Checked by default?</fluent-checkbox>
+    </section>
+
+    <section class="component">
+        <fluent-select title="Select a section">
+            <fluent-option value="1">Beginning</fluent-option>
+            <fluent-option value="2">Middle</fluent-option>
+            <fluent-option value="3">End</fluent-option>
+        </fluent-select>
+    </section>
+
+    <section class="component">
+        <h3>With autocomplete</h3>
+        <fluent-combobox autocomplete="both" placeholder="Select a graphics card">
+            <fluent-option value="1">GTX 1060</fluent-option>
+            <fluent-option value="2">GTX 1070</fluent-option>
+            <fluent-option value="3">GTX 1080</fluent-option>
+            <fluent-option value="4" disabled>GTX 1090</fluent-option>
+        </fluent-combobox>
+    </section>
+
+    <section class="component">
+        <fluent-switch>
+            <span slot="checked-message">On</span>
+            <span slot="unchecked-message">Off</span>
+            <label for="cap-switch">Captions:</label>
+        </fluent-switch>
+    </section>
+
+</body>
+</html>
