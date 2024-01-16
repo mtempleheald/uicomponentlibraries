@@ -8,25 +8,23 @@
     <title>Shoelace components</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@@shoelace-style/shoelace@2.12.0/cdn/themes/light.css" />
     <script type="module" src="https://cdn.jsdelivr.net/npm/@@shoelace-style/shoelace@2.12.0/cdn/shoelace-autoloader.js"></script>
-    <style src="/styles.css"></style>
+    <link href="UIComponentDemo.styles.css" rel="stylesheet">
 </head>
-    <a href="/">Home</a>
 <body>
-    <header>
-        <h1>Shoelace components</h1>
 
-        <a target="_blank" href="https://shoelace.style/">Component Documentation</a>
-    </header>
+<a href="/">Home</a>
+<header>
+    <h1>Shoelace components</h1>
 
-    <section class="component">
-        <sl-card>
-            <h2>@SampleText</h2>
-            <sl-button id="button" size="medium">Click Me</sl-button>
-        </sl-card>
-    </section>
+    <a target="_blank" href="https://shoelace.style/">Component Documentation</a>
+</header>
+<sl-divider></sl-divider>
+
+<main>
 
     <section class="component">
-        <sl-input 
+        <sl-input name="Email"
+            label="Simple text box expecting email"
             class="label-on-left" 
             size="medium" 
             type="email"
@@ -36,7 +34,19 @@
     </section>
 
     <section class="component">
-        <sl-checkbox>Did you check this?</sl-checkbox>
+        <sl-input name="SelectButtonAnswer"
+            type="hidden" 
+            label="Select button component"
+        ></sl-input>
+        <sl-button-group label="Select button component">
+            <sl-button id="button" size="medium">Option A</sl-button>
+            <sl-button id="button" size="medium">Option B</sl-button>
+            <sl-button id="button" size="medium">Option C</sl-button>
+        </sl-button-group>
+    </section>
+
+    <section class="component">
+        <sl-checkbox name="CheckboxAnswer">Did you check this?</sl-checkbox>
         <br />
         <sl-checkbox checked disabled>Is this disabled?</sl-checkbox>
         <br />
@@ -45,7 +55,9 @@
 
     <section class="component">
         <h3>Select list (does not seem to be a searchahead alternative)</h3>
-        <sl-select title="Select a section">
+        <sl-select name="SelectListAnswer"
+            title="Select a section"
+            placeholder="--select--">
             <sl-option value="1">Beginning</sl-option>
             <sl-option value="2">Middle</sl-option>
             <sl-option value="3">End</sl-option>
@@ -53,10 +65,12 @@
     </section>
 
     <section class="component">
-        <sl-switch>
+        <sl-switch name="toggleAnswer">
             Select this?
         </sl-switch>
     </section>
+
+</main>
 
 </body>
 </html>
