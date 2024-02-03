@@ -6,5 +6,21 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <InvariantGlobalization>true</InvariantGlobalization>
   </PropertyGroup>
+ 
+  <ItemGroup>
+    <SvelteCustomElements Include="..\sveltelib\dist\**\*.*"/>
+  </ItemGroup>
+  
+  <Target Name="SvelteCustomElements" AfterTargets="BeforeBuild">
+    <Message Text="Copying svelte custom elements to wwwroot\svelte:" Importance="high"/>
+    <Message Text="@(SvelteCustomElements)" Importance="high"/>
+    <RemoveDir Directories="wwwroot\svelte" />
+    <MakeDir Directories="wwwroot\svelte" Condition=" !Exists('wwwroot\svelte') " />
+    <Copy 
+        SourceFiles="@(SvelteCustomElements)" 
+        DestinationFiles="@(SvelteCustomElements->'wwwroot\svelte\%(RecursiveDir)%(Filename)%(Extension)')" 
+        SkipUnchangedFiles="true"
+    />
+  </Target>
 
 </Project>
