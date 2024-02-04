@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
 
-namespace UIComponentDemo;
+namespace UIComponentDemo.Svelte;
 
 public partial class Apis
 {
-    public static async Task<IResult> Shoelace(
+    public static async Task<IResult> CarbonSvelte(
         HttpContext httpContext,
         ILogger<Apis> logger
     )
     {
-        return new RazorComponentResult(typeof(ShoelaceComponent), new
+        return new RazorComponentResult(typeof(CarbonSvelteComponent), new
         {
             
         })
