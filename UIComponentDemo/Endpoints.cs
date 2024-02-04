@@ -9,9 +9,12 @@ public static class Endpoints
             <a href="/shoelace">Shoelace</a>
             <br/>
             <a href="/svelte">Carbon Components Svelte</a>
+            <br/>
+            <a href="/custom">Custom Elements</a>
         """, "text/html"));
         app.MapGet("/fluentui", FluentUI.Apis.FluentUI);
         app.MapGet("/shoelace", Shoelace.Apis.Shoelace);
         app.MapGet("/svelte", Svelte.Apis.CarbonSvelte);
+        app.MapGet("/custom", CustomElements.Apis.CustomElements);
     }
 }
