@@ -21,10 +21,13 @@ Specifically, for a customer-facing HTMX application with a .NET8+ backend, wher
 
 ## Candidates
 
-- Fluent UI - Webcomponent library designed and maintained by Microsoft, for consistent feel across their sites and applications
-- Material UI - Webcomponent library following Google's Material design philosophy for consistent look and feel across native Android and web
-- Shoelace - webcomponent library independent from corporate design, linked to fontawesome
+- [Fluent UI](https://developer.microsoft.com/en-us/fluentui#/controls/webcomponents) - Webcomponent library designed and maintained by Microsoft, for consistent feel across their sites and applications
+- [Material Web components](https://github.com/material-components/material-web) - Webcomponent library following Google's Material design philosophy for consistent look and feel across native Android and web
+- [Shoelace](https://github.com/shoelace-style/shoelace) - webcomponent library independent from corporate design, linked to fontawesome, built on top of Lit
 - Fluent Blazor - Blazor components built on top of FluentUI's webcomponents, using web assembly to perform logic written in C# in the browser
+- [Carbon components Svelte](https://github.com/carbon-design-system/carbon-components-svelte), compiled as web components/ custom elements - Svelte is pleasant to work with, this proves whether we can use Svelte component libraries too.
+- Custom elements built using [Lit](https://github.com/lit/lit), similar in essence to what Shoelace does, but kept simpler
+- Custom elements built [from scratch](https://developer.mozilla.org/en-US/docs/Web/API/Web_Components/Using_custom_elements) - do we want a dependency on Lit/Shoelace?  If we follow web standards directly we're more future proof.
 - ...
 
 # Criteria
