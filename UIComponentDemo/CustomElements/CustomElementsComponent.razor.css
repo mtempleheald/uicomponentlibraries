@@ -1,10 +1,12 @@
-﻿main, header {
+﻿/* Components should be styled via theme, this is exclusively for high level page structure  */
+main, header {
     max-width: 800px;
     margin: 0 auto;
 }
 section.component {
     border: 1px dotted grey;
 }
+/* Can style custom element from outside, will by default override component's :host styling */
 mth-display {
     display: block;
     background-color: lightpink;

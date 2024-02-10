@@ -1,0 +1,7 @@
+:root {
+    --display-vpad: 10px;
+    --display-hpad: 25px;
+    --display-border-colour: blue; 
+    --display-border-width: 2px;
+    --display-border-style: dotted;
+}

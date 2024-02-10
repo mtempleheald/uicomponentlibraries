@@ -1,8 +1,25 @@
 const template = document.createElement("template")
 template.innerHTML = `
-  <div>
-    <slot></slot>
-  </div>
+<style>
+  :host {
+    // override whatever was set from outside to better enforce the theme
+    display: block !important;
+    background-color: yellow !important;
+    border: none !important;
+  }
+  :host([hidden]) {
+    display: none;
+  }
+
+  div {
+    // background-color: initial; revert; revert-layer; unset; all;
+    padding: var(--display-vpad, 0) var(--display-hpad, 0);
+    border: var(--display-border-width, 0) var(--display-border-style, solid) var(--display-border-colour); 
+  }
+</style>
+<div>
+  <slot></slot>
+</div>
 `
 
 class MthDisplay extends HTMLElement {
@@ -11,7 +28,7 @@ class MthDisplay extends HTMLElement {
 
   constructor() {
     super()
-    const shadow = this.attachShadow({ mode: "open" })
+    const shadow = this.attachShadow({ mode: "closed" })
     shadow.append(template.content.cloneNode(true))
   }
   
